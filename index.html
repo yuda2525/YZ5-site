@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Y&Z Studio - Solusi Digital Kreatif</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    :root {
+      --primary-color: #00bfff;
+      --bg-dark: #0d1117;
+      --bg-body: #1a1f26;
+      --bg-header: rgba(13, 17, 23, 0.7);
+      --bg-footer: rgba(10, 10, 10, 0.8);
+      --glass: rgba(255, 255, 255, 0.05);
+      --text-light: #f0f0f0;
+      --text-muted: #bbb;
+      --accent: #00bfff;
+      --radius: 16px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-body);
+      color: var(--text-light);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: var(--bg-header);
+      backdrop-filter: blur(12px);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--glass);
+    }
+    header h1 {
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card-box {
+      background: var(--glass);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .card-box h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+    .pricing-table {
+      display: grid;
+      gap: 1.5rem;
+    }
+    .slider {
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .slider .card-box {
+      display: inline-block;
+      width: 300px;
+      margin-right: 1rem;
+    }
+    .accordion {
+      background-color: var(--glass);
+      color: var(--text-light);
+      border: none;
+      border-radius: var(--radius);
+      padding: 1rem;
+      text-align: left;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: .5rem;
+    }
+    .accordion-content {
+      display: none;
+      padding: 1rem;
+      background: rgba(255,255,255,0.02);
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+    }
+    footer {
+      background: var(--bg-footer);
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .floating-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .floating-btn img {
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Y&Z Studio</h1>
+    <div>Solusi Digital Kreatif</div>
+  </header>
+
+  <section id="layanan">
+    <h2>Layanan & Harga</h2>
+    <div class="pricing-table">
+      <div class="card-box">
+        <h3>Basic - Rp 500.000</h3>
+        <p>Landing Page 1 Halaman, responsif. 1x revisi.</p>
+      </div>
+      <div class="card-box">
+        <h3>Pro - Rp 850.000</h3>
+        <p>Website 3 Halaman, interaktif. 2x revisi.</p>
+      </div>
+      <div class="card-box">
+        <h3>Premium - Rp 1.250.000</h3>
+        <p>Website multi-halaman, animasi 3D, revisi tak terbatas (30 hari).</p>
+      </div>
+      <div class="card-box">
+        <h3>Custom - Mulai Rp 1.000.000</h3>
+        <p>Fitur sesuai kebutuhan Anda.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimoni">
+    <h2>Testimoni</h2>
+    <div class="slider" id="testi-slider">
+      <div class="card-box"><strong>Rani</strong><br>"Pelayanan cepat dan hasil desainnya keren banget…"</div>
+      <div class="card-box"><strong>Ardi</strong><br>"Website saya langsung kelihatan profesional dan responsif…"</div>
+      <div class="card-box"><strong>Yuni</strong><br>"Desain interaktif dan support-nya luar biasa…"</div>
+    </div>
+  </section>
+
+  <section id="artikel">
+    <h2>Artikel Terbaru</h2>
+    <div class="slider">
+      <div class="card-box">Cara Membuat Landing Page yang Efektif</div>
+      <div class="card-box">Mengapa Desain Interaktif Menarik Lebih Banyak Klien</div>
+      <div class="card-box">Perbedaan Pro vs Premium dalam Web Studio</div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>Q&A / FAQ</h2>
+    <button class="accordion">Berapa lama pengerjaan?</button>
+    <div class="accordion-content">Sekitar 3 hari kerja (tergantung kompleksitas).</div>
+    <button class="accordion">Apakah bisa revisi?</button>
+    <div class="accordion-content">Ya, sesuai paket yang dipilih.</div>
+    <button class="accordion">Bisa bayar via apa?</button>
+    <div class="accordion-content">Transfer Dana ke 0857-2090-6090 (Yuda).</div>
+  </section>
+
+  <footer>
+    &copy; 2025 Y&Z Studio. Powered by AI & Human Creativity.
+  </footer>
+
+  <div class="floating-btn">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+    <img src="https://img.icons8.com/color/48/000000/gmail-new.png" alt="Gmail">
+  </div>
+
+  <script>
+    const accordions = document.querySelectorAll('.accordion');
+    accordions.forEach(acc => acc.addEventListener('click', () => {
+      const panel = acc.nextElementSibling;
+      panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+    }));
+
+    // Optional autoplay scroll for sliders
+    setInterval(() => {
+      document.querySelectorAll('.slider').forEach(slider => {
+        slider.scrollLeft += 1;
+        if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+          slider.scrollLeft = 0;
+        }
+      });
+    }, 30);
+  </script>
+</body>
+</html>
